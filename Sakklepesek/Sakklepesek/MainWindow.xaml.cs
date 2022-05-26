@@ -21,10 +21,29 @@ namespace Sakklepesek
     public partial class MainWindow : Window
     {
         Grid tabla;
+        Rectangle[,] tablaMezok;
         public MainWindow()
         {
             InitializeComponent();
             Felulet();
+            TablaFelulete();
+        }
+
+        private void TablaFelulete()
+        {
+            tablaMezok = new Rectangle[10, 10];
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    tablaMezok[i, j] = new Rectangle();
+                    tablaMezok[i, j].Stroke = Brushes.Black;
+                    tablaMezok[i, j].Fill = (i + j) % 2 == 0 ? Brushes.White : Brushes.Black;
+                    tabla.Children.Add(tablaMezok[i, j]);
+                    Grid.SetColumn(tablaMezok[i, j], j);
+                    Grid.SetRow(tablaMezok[i, j], i);
+                }
+            }
         }
 
         private void Felulet()
