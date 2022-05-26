@@ -20,6 +20,7 @@ namespace Sakklepesek
     /// </summary>
     public partial class MainWindow : Window
     {
+        Grid tabla;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,6 +40,13 @@ namespace Sakklepesek
             babuk.Items.Add("Sötét gyalog");
             ablak.Children.Add(babuk);
             babuk.Height = 25;
+            tabla = new Grid();
+            for (int i = 0; i < 10; i++)
+            {
+                tabla.RowDefinitions.Add(new RowDefinition());
+                tabla.ColumnDefinitions.Add(new ColumnDefinition());
+            }
+            ablak.Children.Add(tabla);
         }
 
     }

@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="Sakklepesek" Height="1000" Width="1000">
     <Grid x:Name="ablak">
-
+        <Grid.RowDefinitions></Grid.RowDefinitions>
     </Grid>
 </Window>
