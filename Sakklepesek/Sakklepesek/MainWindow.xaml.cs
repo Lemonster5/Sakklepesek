@@ -48,6 +48,12 @@ namespace Sakklepesek
                 }
             }
             tablaMezok[aktElsoKord, aktMasodikKord].Fill = Brushes.Red;
+            Label poz = new Label();
+            poz.Content = $"[{aktElsoKord};{aktMasodikKord}]";
+
+            tabla.Children.Add(poz);
+
+           
         }
 
         private void TablaFelulete()
@@ -76,7 +82,7 @@ namespace Sakklepesek
             for (int i = 0; i < 3; i++)
             {
                 ablak.RowDefinitions.Add(new RowDefinition());
-                
+             
             }
             ComboBox babuk = new ComboBox();
             babuk.Items.Add("Király");
