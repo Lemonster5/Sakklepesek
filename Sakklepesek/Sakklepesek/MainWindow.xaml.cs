@@ -49,6 +49,12 @@ namespace Sakklepesek
         private void Felulet()
 
         {
+
+            for (int i = 0; i < 3; i++)
+            {
+                ablak.RowDefinitions.Add(new RowDefinition());
+                
+            }
             ComboBox babuk = new ComboBox();
             babuk.Items.Add("Király");
             babuk.Items.Add("Királynő");
@@ -59,6 +65,7 @@ namespace Sakklepesek
             babuk.Items.Add("Sötét gyalog");
             ablak.Children.Add(babuk);
             babuk.Height = 25;
+            Grid.SetRow(babuk, 0);
             tabla = new Grid();
             for (int i = 0; i < 10; i++)
             {
@@ -66,6 +73,10 @@ namespace Sakklepesek
                 tabla.ColumnDefinitions.Add(new ColumnDefinition());
             }
             ablak.Children.Add(tabla);
+            tabla.Height = 400;
+            tabla.Width = 400;
+            Grid.SetRow(tabla, 1);
+          
         }
 
     }
