@@ -29,6 +29,27 @@ namespace Sakklepesek
             TablaFelulete();
         }
 
+        private void Kijeloles(object sender, MouseButtonEventArgs e)
+        {
+            Rectangle jelenlegi = sender as Rectangle;
+            int aktElsoKord = 0;
+            int aktMasodikKord = 0;
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (tablaMezok[i, j].Equals(jelenlegi))
+                    {
+                        aktElsoKord = i;
+                        aktMasodikKord = j;
+
+                    }
+                    tablaMezok[i, j].Fill = (i + j) % 2 == 0 ? Brushes.White : Brushes.Black;
+                }
+            }
+            tablaMezok[aktElsoKord, aktMasodikKord].Fill = Brushes.Red;
+        }
+
         private void TablaFelulete()
         {
             tablaMezok = new Rectangle[10, 10];
@@ -42,8 +63,10 @@ namespace Sakklepesek
                     tabla.Children.Add(tablaMezok[i, j]);
                     Grid.SetColumn(tablaMezok[i, j], j);
                     Grid.SetRow(tablaMezok[i, j], i);
+                    tablaMezok[i, j].MouseUp += Kijeloles;
                 }
             }
+            
         }
 
         private void Felulet()
