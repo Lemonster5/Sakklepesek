@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Sakklepesek"
         mc:Ignorable="d"
-        Title="Sakklepesek" Height="1000" Width="1000">
+        Title="Sakklepesek" Height="850" Width="850">
     <Grid x:Name="ablak">
         <Grid.RowDefinitions></Grid.RowDefinitions>
+        <ComboBox x:Name="babuk" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Height="27"/>
+        <Label x:Name="poz" Content="" HorizontalAlignment="Left" Margin="42,748,0,0" VerticalAlignment="Top" Height="51" Width="350" FontSize="20"/>
     </Grid>
 </Window>
