@@ -29,6 +29,64 @@ namespace Sakklepesek
             TablaFelulete();
         }
 
+
+        private void babuKivalasztas(object sender, RoutedEventArgs e)
+        {
+            Rectangle aktualis = sender as Rectangle;
+            if (babuk.SelectedItem.ToString() == "Király")
+            {
+                aktualis.Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(@"pack://application:,,,/babukKepei/kiraly.png", UriKind.Absolute))
+                };
+            }
+            else if (babuk.SelectedItem.ToString() == "Királynő")
+            {
+                aktualis.Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(@"pack://application:,,,/babukKepei/vezer.png", UriKind.Absolute))
+                };
+            }
+            else if (babuk.SelectedItem.ToString() == "Bástya")
+            {
+                aktualis.Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(@"pack://application:,,,/babukKepei/bastya.png", UriKind.Absolute))
+                };
+            }
+            else if (babuk.SelectedItem.ToString() == "Huszár")
+            {
+                aktualis.Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(@"pack://application:,,,/babukKepei/huszar.png", UriKind.Absolute))
+                };
+            }
+            else if (babuk.SelectedItem.ToString() == "Futó")
+            {
+                aktualis.Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(@"pack://application:,,,/babukKepei/futó.png", UriKind.Absolute))
+                };
+            }
+            else if (babuk.SelectedItem.ToString() == "Világos gyalog")
+            {
+                aktualis.Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(@"pack://application:,,,/babukKepei/feherGyalog.png", UriKind.Absolute))
+                };
+            }
+            else if (babuk.SelectedItem.ToString() == "Sötét gyalog")
+            {
+                aktualis.Fill = new ImageBrush
+                {
+                    ImageSource = new BitmapImage(new Uri(@"pack://application:,,,/babukKepei/feketeGyalog.png", UriKind.Absolute))
+                };
+            }
+        }
+
+        //Innen vettem, hogy Rectangle-nél hogyan is kell képet berakni egy aktuális rect-be.
+        //https://stackoverflow.com/questions/17107720/how-to-set-the-background-of-rectangle-with-a-picture
+
         private void Kijeloles(object sender, MouseButtonEventArgs e)
         {
             Rectangle jelenlegi = sender as Rectangle;
@@ -48,17 +106,13 @@ namespace Sakklepesek
                 }
             }
             tablaMezok[aktElsoKord, aktMasodikKord].Fill = Brushes.Red;
-            
+
             poz.Content = $"Az aktuális pozíció: [{aktElsoKord};{aktMasodikKord}]";
-
-            
-
-           
         }
 
         private void TablaFelulete()
         {
-            tablaMezok = new Rectangle[10, 10];
+            tablaMezok = new Rectangle[8, 8];
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -70,17 +124,15 @@ namespace Sakklepesek
                     Grid.SetColumn(tablaMezok[i, j], j);
                     Grid.SetRow(tablaMezok[i, j], i);
                     tablaMezok[i, j].MouseUp += Kijeloles;
+                    tablaMezok[i, j].MouseUp += babuKivalasztas;
                 }
             }
-            
+
         }
 
         private void Felulet()
-
         {
 
-          
-            
             babuk.Items.Add("Király");
             babuk.Items.Add("Királynő");
             babuk.Items.Add("Bástya");
@@ -88,10 +140,10 @@ namespace Sakklepesek
             babuk.Items.Add("Huszár");
             babuk.Items.Add("Világos gyalog");
             babuk.Items.Add("Sötét gyalog");
-            
-           
+
+
             tabla = new Grid();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 8; i++)
             {
                 tabla.RowDefinitions.Add(new RowDefinition());
                 tabla.ColumnDefinitions.Add(new ColumnDefinition());
@@ -99,8 +151,8 @@ namespace Sakklepesek
             ablak.Children.Add(tabla);
             tabla.Height = 600;
             tabla.Width = 600;
-           
-          
+
+
         }
 
     }

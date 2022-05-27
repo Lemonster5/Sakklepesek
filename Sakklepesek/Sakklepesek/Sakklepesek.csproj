@@ -6,4 +6,26 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="babukKepei\bastya.png" />
+    <None Remove="babukKepei\feherGyalog.png" />
+    <None Remove="babukKepei\feketeGyalog.png" />
+    <None Remove="babukKepei\futó.png" />
+    <None Remove="babukKepei\huszar.png" />
+    <None Remove="babukKepei\kiraly.png" />
+    <None Remove="babukKepei\vezer.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="babukKepei\bastya.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="babukKepei\feherGyalog.png" />
+    <Resource Include="babukKepei\feketeGyalog.png" />
+    <Resource Include="babukKepei\futó.png" />
+    <Resource Include="babukKepei\huszar.png" />
+    <Resource Include="babukKepei\kiraly.png" />
+    <Resource Include="babukKepei\vezer.png" />
+  </ItemGroup>
+
 </Project>
