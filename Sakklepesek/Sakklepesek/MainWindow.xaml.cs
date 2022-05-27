@@ -84,7 +84,7 @@ namespace Sakklepesek
             }
         }
 
-        //Innen vettem, hogy Rectangle-nél hogyan is kell képet berakni egy aktuális rect-be.
+        //Innen vettem, hogy Rectangle-nél hogyan is kell képet berakni egy aktuális rect-be. Mert nem tudtam fejből sajnos :(
         //https://stackoverflow.com/questions/17107720/how-to-set-the-background-of-rectangle-with-a-picture
 
         private void Kijeloles(object sender, MouseButtonEventArgs e)
@@ -94,7 +94,7 @@ namespace Sakklepesek
             int aktMasodikKord = 0;
             for (int i = 0; i < 8; i++)
             {
-                for (int j = 0; j < 8; j++)
+                for (int j = 0; j < 8 ; j++)
                 {
                     if (tablaMezok[i, j].Equals(jelenlegi))
                     {

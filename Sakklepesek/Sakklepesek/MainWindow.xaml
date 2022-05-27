@@ -10,5 +10,21 @@
         <Grid.RowDefinitions></Grid.RowDefinitions>
         <ComboBox x:Name="babuk" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="181" Height="27"/>
         <Label x:Name="poz" Content="" HorizontalAlignment="Left" Margin="42,748,0,0" VerticalAlignment="Top" Height="51" Width="350" FontSize="20"/>
+        <Label Content="a" HorizontalAlignment="Left" Margin="142,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="b" HorizontalAlignment="Left" Margin="220,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="c" HorizontalAlignment="Left" Margin="298,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="d" HorizontalAlignment="Left" Margin="376,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="e" HorizontalAlignment="Left" Margin="454,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="f" HorizontalAlignment="Left" Margin="532,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="g" HorizontalAlignment="Left" Margin="610,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="h" HorizontalAlignment="Left" Margin="688,717,0,0" VerticalAlignment="Top"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="84,657,0,0" VerticalAlignment="Top"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="84,579,0,0" VerticalAlignment="Top"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="84,501,0,0" VerticalAlignment="Top"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="84,423,0,0" VerticalAlignment="Top"/>
+        <Label Content="5" HorizontalAlignment="Left" Margin="84,345,0,0" VerticalAlignment="Top"/>
+        <Label Content="6" HorizontalAlignment="Left" Margin="84,267,0,0" VerticalAlignment="Top"/>
+        <Label Content="7" HorizontalAlignment="Left" Margin="84,189,0,0" VerticalAlignment="Top"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="84,111,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
